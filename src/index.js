@@ -1,6 +1,28 @@
+// Variaveis da calculadora
 const heroi = "Wandré";
-let vitorias = 172;
-let derrotas = 88;
+let vitorias = gerarVitorias();
+let derrotas = gerarDerrotas();
+
+
+function gerarVitorias() {
+    // Gerar vitórias aleatórias
+    let vitoriasAleatorias = "";
+    for (let i = 0; i <= 1; i++) {
+        vitoriasAleatorias += Math.floor(Math.random() * 12);
+    }
+    return vitoriasAleatorias;
+}
+
+
+function gerarDerrotas() {
+    // Gerar derrotas aleatórias
+    let vitoriasDerrotas = "";
+    for (let i = 0; i <= 1; i++) {
+        vitoriasDerrotas += Math.floor(Math.random() * 3);
+    }
+    return vitoriasDerrotas;
+}
+
 
 function calcularNivel(vitorias, derrotas) {
     // Calcula o saldo de rankeados
@@ -30,5 +52,3 @@ function calcularNivel(vitorias, derrotas) {
 const resultado = calcularNivel(vitorias, derrotas);
 
 console.log("O Heroi " + heroi + " tem saldo de vitórias de " + resultado.saldo + ", ele está no nível " + resultado.nivel + ".");
-
-
