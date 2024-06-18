@@ -16,11 +16,11 @@ function gerarVitorias() {
 
 function gerarDerrotas() {
     // Gerar derrotas aleatórias
-    let vitoriasDerrotas = "";
+    let derrotasAleatorias = "";
     for (let i = 0; i <= 1; i++) {
-        vitoriasDerrotas += Math.floor(Math.random() * 3);
+        derrotasAleatorias += Math.floor(Math.random() * 3);
     }
-    return vitoriasDerrotas;
+    return derrotasAleatorias;
 }
 
 
